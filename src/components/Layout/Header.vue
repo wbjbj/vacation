@@ -1,24 +1,31 @@
 <template>
-  <el-header style="height: 48px">Header</el-header>
+  <el-header style="height: 48px">
+    <div @click="changeMenus">
+        i
+    </div>
+  </el-header>
 </template>
 
 <script>
 export default {
   data() {
-    return {};
+    return {
+      open: true,
+    };
   },
   created() {},
   mounted() {},
-  methods: {},
+  methods: {
+    changeMenus() {
+      this.$store.commit('changeOpen',!this.$store.state.menuOpen)
+    },
+  },
   computed: {},
 };
 </script>
 
 <style lang='scss' scoped>
 .el-header {
-  background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
   line-height: 48px;
   width: 100%;
   position: absolute;

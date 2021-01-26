@@ -5,8 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+      menuOpen:true,
   },
   mutations: {
+      changeOpen(state,open){
+          state.menuOpen = open
+      }
   },
   actions: {
   },

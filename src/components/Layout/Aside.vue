@@ -1,5 +1,7 @@
 <template>
-  <el-aside width="200px">Aside</el-aside>
+  <el-aside :width="$store.state.menuOpen ? '200px' : '64px'">
+    {{ $store.state.menuOpen }}
+  </el-aside>
 </template>
 
 <script>
